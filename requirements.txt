@@ -1,0 +1,5 @@
+pytest==8.3.5
+selenium
+webdriver_manager
+sqlalchemy
+psycopg2-binary
