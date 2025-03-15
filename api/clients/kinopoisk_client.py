@@ -6,16 +6,6 @@ class KinopoiskClient:
         self.base_url = base_url
         self.headers = {"X-API-KEY": api_key}
 
-    def get_auth_token(self, username, password):
-        auth_url = f"{self.base_url}/auth"  # Предположим, что endpoint для авторизации — /auth
-        auth_data = {"username": username, "password": password}
-
-        response = requests.post(auth_url, json=auth_data, headers=self.headers)
-        if response.status_code == 200:
-            return response.json()["token"]
-        else:
-            raise Exception(f"Ошибка авторизации: {response.status_code}, {response.text}")
-
     def search_movie_by_title(self, title):
         response = requests.get(f"{self.base_url}/v1.4/movie/search", params={"query": title}, headers=self.headers)
         response.raise_for_status()
