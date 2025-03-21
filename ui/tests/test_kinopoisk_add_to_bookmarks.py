@@ -1,5 +1,4 @@
 import allure
-import pytest
 from ui.pages.kinopoisk_movie_page import KinopoiskMoviePage
 from ui.pages.kinopoisk_profile_page import KinopoiskProfilePage
 
